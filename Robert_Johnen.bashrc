@@ -1,4 +1,6 @@
-# Farbcodes --> echon -en '\001 
+# entweder in der.bashrc sourcen oder direkt da rein...
+
+# Farbcodes --> echon -en '\001...\002'
 # sorgt dafür, dass bei der Nutzung im Prompt
 # die Zeichen der ASCII-Farbcodes nicht mitgezählt werden
 export CRESET=$(echo -en '\001\033[0m\002')
