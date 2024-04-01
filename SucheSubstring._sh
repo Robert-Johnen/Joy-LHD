@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# Funktion zur Suche eines Strings in einem
+# Funktionsnamen, eine aufuehrbaren Datei oder einem Alias
+
+_sucheSub() {
+  ### suche nach Substring in alises, Funktionen, ausfuehrbaren Dateien
+  local lv_status=1
+  # Standard ist Substing nicht gefunden dann Errorlevel=false
+  local lv_dir
+  # lokale Zählvariable der Verzeichnisse im Pfad
+  local lv_file
+  # lokale Zählvariable der Dateien immomentanen Verzeichnis im Pfad
+  local lv_substr
+  # lokaler Speicher für den übergebenen Parameter
+  if [[ -z "$1" ]]; then
+    # kein Parameter übergeben
+    echo "Aufruf mit user@host:~ \$> _sucheSub substring"
+    # Fehlermeldung
+    return 2
+    # exit mit Errorlevel 2
+  else
+    # Parameter übergeben
+    lv_substr="$1"
+    # speichere in lokaler Variable
+  fi
+  # suche in allen alias
+  alias | grep "$lv_substr[^ ]*=" && lv_status=0
+  #suche in der History
+  history | awk -v str="${lv_substr}" '$2 ~ str'  && lv_status=0
+#  declare -F | awk '$3 !~ /^_/ {print $3"()"}' | fgrep "$lv_substr" && lv_status=0
+#  declare -F | awk '{print $3"()"}' | grep "$lv_substr" && lv_status=0
+  declare -F | awk -v str="${lv_substr}" '$3 ~ str {print $3"()"}' && lv_status=0
+  # suche in allen geladenen Funktionen und gebe Funktionsname aus, wenn gefunden
+  for lv_dir in $(sed 's/:/ /g' <<<$PATH); do
+    #durchforste alle Verzeichnisse im Pfad
+    for lv_file in $lv_dir/*"$lv_substr"*; do
+      # und in jedem Verzeichnis die Dateien
+      if [ -x "$lv_file" -a -f "$lv_file" ]; then
+        #wenn Datei existiert und ausführbar ist
+        echo "$lv_file"
+        # ausgeben
+        lv_status=0
+      fi
+    done
+  done
+  return $lv_status
+  # Ausgabe des Exitcodes wenn irgendwo gefunden dann true, wenn nirgendwo gefunden dann false
+  }
+
