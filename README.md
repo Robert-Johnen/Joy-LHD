@@ -29,5 +29,15 @@ setzt Variablen fuer die Formatcodes am Prompt im Terminal
 ab jetzt können Voder- und Hintergrundfarbe sowie rudimentäre Textformatierungen über Variablen gesetzt werden.
 #### Beispiel: ~ $> echo "${YELLOW}${BBLUE}gelber Text, blauer Hintergrund${CRESET} und wieder normal"
 
+## .
+
+stellt folgende Funktion zur Verfügung:
+### _myPSx()
+
+Setzt den Prompt je nach übergebenem Parameter auch verschiedene Weise um. Bei Aufruf ohne Parameter gilt _myPSx 0 als Standard, bei _myPSx 6 wird auf den Stadardprompt des Systems zurückgesetzt.
+#### Ausfruf: ~ $> _myPSx (0|1|2|3|4|5|6)
+
+
+
 
 ## . 
