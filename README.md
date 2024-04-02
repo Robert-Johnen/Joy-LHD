@@ -28,6 +28,14 @@ Joy@LHD kleiner Spaß mit Scripting in der LHD
 > Setzt den Prompt der Bash je nach übergebenem Parameter (0 - 6) auf verschiedene Weise um. Bei Aufruf ohne Parameter gilt _myPSx 0 als Standard, bei _myPSx 6 wird auf den Stadardprompt des Systems zurückgesetzt. Die Funktion setzt die unter FarbcodesConsole._sh in Funktion _colorCodesPrompt definierten Variablen zwingend voraus. 
 #### Aufruf (Beispiel): `~ $> _myPSx 0`
 
+## . PfadManipulation._sh
+> stellt folgende Funktionen zur Verfügung:
+## _add2Path()
+## _rmPath()
+> Mit _add2Path wird der als Parameter übergebene Pfad auf Existenz geprüft und in die Variable $PATH aufgenommen, sollte er noch nicht darin sein. Sollten Doubletten existieren, werden diese entfernt. Mit _rmPath wird der als Parameter übergebene Pfad aus der Variablen $PATH entfernt. Beides gilt für die jeweils aktive Shell.
+#### Aufruf: `~ $> _add2Path /hinzuzufügender/Pfad`
+#### Aufruf: `~ $> _rmPath /zu/entfernender//Pfad`
+
 ## . TestePrimzahl._sh
 > stellt folgende Funktion zur Verfügung:
 ### _prim()
