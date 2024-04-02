@@ -14,7 +14,7 @@ stellt folgende Funktion zur Verfügung:
 lege Inhalt einer Textdatei in die Systemzwischenablage oder
 wenn Datei keine Textdatei, dan lege nur den Dateinamen in der Systemzwischenablage ab.
 funktioniert unter Wayland und XOrg/X11
-Aufruf: ~ $> _f2xcb /Pfad/zur/Datei.txt
+#### Aufruf: ~ $> _f2xcb /Pfad/zur/Datei.txt
 
 ## . SucheSubstring._sh 
 
