@@ -1,6 +1,6 @@
 # Joy-LHD
 ## Joy@LHD kleiner Spaß mit Scripting in der LHD
-> Alle hier aufgeführten Dateien enthalten Funktionen. Damit die Funktionen abrufbar sind, müssen sie in der <file:///~/.profile> oder in der ~/.alias oder direkt am Prompt gesourced werden.
+> Alle hier aufgeführten Dateien enthalten Funktionen. Damit die Funktionen abrufbar sind, müssen sie in der **~/.profile** oder in der **~/.alias** oder direkt am Prompt gesourced werden.
 
 ## . DateiZumClipboard._sh
 > stellt folgende Funktion zur Verfügung:
