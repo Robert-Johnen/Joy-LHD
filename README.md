@@ -5,14 +5,14 @@ Joy@LHD kleiner Spaß mit Scripting in der LHD
 ## . DateiZumClipboard._sh
 > stellt folgende Funktion zur Verfügung:
 ### _f2xcb()
-> Lege den Inhalt einer als Parameter übergebenen Textdatei in die Systemzwischenablage oder wenn Datei keine Textdatei, dan lege nur den Dateinamen in der Systemzwischenablage ab. Funktioniert unter Wayland und XOrg/X11. Nach Aufruf kann der in die Zwischenablage abgelegte Inhalt per STRG-V eingefügt werden. Optiona list ein zweiter Parameter, der angibt ob ein Vor- und ein Abspann mit indie Zwischenablage abgelegt wird. Standard ist für den zweiten Parameter 0, d.h. mit Vor- und abspann. Als zweiter Parameter 1 bedeutet ohne Vor- und Abspann
+> Lege den Inhalt einer als Parameter übergebenen Textdatei in die Systemzwischenablage oder wenn Datei keine Textdatei, dan lege nur den Dateinamen in der Systemzwischenablage ab. Funktioniert unter Wayland und XOrg/X11. Nach Aufruf kann der in die Zwischenablage abgelegte Inhalt per STRG-V eingefügt werden. Optional ist ein zweiter Parameter, der angibt ob ein Vor- und ein Abspann mit in die Zwischenablage abgelegt wird. Standard ist für den zweiten Parameter 0, d.h. mit Vor- und abspann. Als zweiter Parameter 1 bedeutet ohne Vor- und Abspann
 #### Aufruf: `~ $> _f2xcb /Pfad/zur/Datei.txt` mit Vor- und Abspamm
 #### Aufruf: `~ $> _f2xcb /Pfad/zur/Datei.txt 1` ohne Vor- und Abspamm
 
 ## . SucheSubstring._sh 
 > stellt folgende Funktion zur Verfügung:
 ### _sucheSub()
-> sucht in den Namen der Aliase, in den Namen deklarierten Funktionen, in der History nach Befehlseingaben und im $PATH nach Executables, die den an die Funktion als Parameter übergebenen String enthalten. Gefundene Aliase, Funktionen, Zeilen in der History und Executables weden Zeilenweise ausgegeben.
+> sucht in den Namen der Aliase, in den Namen deklarierten Funktionen, in der History nach Befehlseingaben und im $PATH nach Executables, die den an die Funktion als Parameter übergebenen String enthalten. Gefundene Aliase, Funktionen, Zeilen in der History und Executables weden zeilenweise ausgegeben.
 #### Aufruf: `~ $> _sucheSub Suchstring`
 
 ## . FarbcodesConsole._sh
