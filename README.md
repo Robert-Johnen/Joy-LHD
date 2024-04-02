@@ -22,6 +22,14 @@ stellt folgende Funktion zur Verfügung:
 sucht in den Namen der Aliase, in den Namen deklarierten Funktionen,
 in der History nach Befehlseingaben und im $PATH nach Executables,
 die den an die Funktion als Parameter übergebenen String enthalten.
-#### ~ $> _sucheSub Suchstring
+#### Aufruf: ~ $> _sucheSub Suchstring
+
+## . FarbcodesConsole._sh
+
+stellt folgende Funktion zur Verfügung:
+### _colorCodesPrompt()
+
+setzt Variablen fuer die Formatcodes am Prompt im Terminal
+#### Aufruf: ~ $> _colorCodesPrompt
 
 ## . 
