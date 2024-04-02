@@ -5,7 +5,7 @@ alle hier aufgeführten Dateien enthalten Funktionen.
 Damit die Funktionen abrufbar sind, müssen sie in der .profile
 oder in der .alias oder direkt am Prompt gesourced werden.
 
-## . DateiZurZwischenablage._sh
+## . DateiZumClipboard._sh
 
 stellt folgende Funktion zur Verfügung:
   _f2xcb()
