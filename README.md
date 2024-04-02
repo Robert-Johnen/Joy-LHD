@@ -32,4 +32,10 @@ stellt folgende Funktion zur Verfügung:
 setzt Variablen fuer die Formatcodes am Prompt im Terminal
 #### Aufruf: ~ $> _colorCodesPrompt
 
+ab jetzt können Voder- und Hintergrundfarbe sowie rudimentäre
+Textformatierungen über Variablen gesetzt werden: 
+Beispiel:
+#### ~ $> echo "${YELLOW}${BBLUE}gelber Text, blauer Hintergrund${CRESET} und wieder normal"
+
+
 ## . 
