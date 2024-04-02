@@ -7,7 +7,7 @@ Alle hier aufgeführten Dateien enthalten Funktionen.Damit die Funktionen abrufb
 stellt folgende Funktion zur Verfügung:
 ### _f2xcb()
 
-lege Inhalt einer Textdatei in die Systemzwischenablage oder wenn Datei keine Textdatei, dan lege nur den Dateinamen in der Systemzwischenablage ab. Funktioniert unter Wayland und XOrg/X11
+Lege den Inhalt einer als Parameter übergebenen Textdatei in die Systemzwischenablage oder wenn Datei keine Textdatei, dan lege nur den Dateinamen in der Systemzwischenablage ab. Funktioniert unter Wayland und XOrg/X11
 #### Aufruf: ~ $> _f2xcb /Pfad/zur/Datei.txt
 
 ## . SucheSubstring._sh 
@@ -26,18 +26,21 @@ stellt folgende Funktion zur Verfügung:
 setzt Variablen fuer die Formatcodes am Prompt im Terminal
 #### Aufruf: ~ $> _colorCodesPrompt
 
-ab jetzt können Voder- und Hintergrundfarbe sowie rudimentäre Textformatierungen über Variablen gesetzt werden.
-#### Beispiel: ~ $> echo "${YELLOW}${BBLUE}gelber Text, blauer Hintergrund${CRESET} und wieder normal"
+Ab dem Aufruf können können in der aktiven Shell Vorder- und Hintergrundfarbe sowie rudimentäre Textformatierungen über Variablen gesetzt werden.
+#### Beispiel (Nutzung der Variablen): ~ $> echo "${YELLOW}${BBLUE}gelber Text, blauer Hintergrund${CRESET} und wieder normal"
 
-## .
+## . MeinPrompt._sh
 
 stellt folgende Funktion zur Verfügung:
 ### _myPSx()
 
-Setzt den Prompt je nach übergebenem Parameter auch verschiedene Weise um. Bei Aufruf ohne Parameter gilt _myPSx 0 als Standard, bei _myPSx 6 wird auf den Stadardprompt des Systems zurückgesetzt.
-#### Ausfruf: ~ $> _myPSx (0|1|2|3|4|5|6)
+Setzt den Prompt der Bash je nach übergebenem Parameter (0 - 6) auf verschiedene Weise um. Bei Aufruf ohne Parameter gilt _myPSx 0 als Standard, bei _myPSx 6 wird auf den Stadardprompt des Systems zurückgesetzt.
+#### Aufruf (Beispiel): ~ $> _myPSx 0
 
+## . TestePrimzahl._sh
 
+stellt folgende Funktion zur Verfügung:
+### _prim()
 
-
-## . 
+Testet ob die als Parameter übergebene Zahl eine Primzahl ist. Gibt /true/ zurück, wenn Prim und /false/, wenn nicht. Der Rückganewert ist 127, wenn keine positive Ganzzahl übergeben wurde.
+#### Aufruf (Beispiel): ~ $> _prim 19 && echo "prim" || echo "nicht prim"
