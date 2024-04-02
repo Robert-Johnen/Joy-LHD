@@ -27,7 +27,7 @@ setzt Variablen fuer die Formatcodes am Prompt im Terminal
 #### Aufruf: ~ $> _colorCodesPrompt
 
 Ab dem Aufruf können können in der aktiven Shell Vorder- und Hintergrundfarbe sowie rudimentäre Textformatierungen über Variablen gesetzt werden.
-#### Beispiel (Nutzung der Variablen): ~ $> echo "${YELLOW}${BBLUE}gelber Text, blauer Hintergrund${CRESET} und wieder normal"
+#### Beispiel (Nutzung der Variablen): ~ \$> echo "${YELLOW}${BBLUE}gelber Text, blauer Hintergrund${CRESET} und wieder normal"
 
 ## . MeinPrompt._sh
 
